@@ -87,6 +87,48 @@
             font-size: 1.05em;
         }
 
+        /* Styling for the Invariants Section */
+        hr.separator {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-cyan), var(--primary-violet), transparent);
+            margin: 50px 0;
+            opacity: 0.6;
+        }
+
+        .invariants-title {
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            border: none;
+        }
+
+        .invariants-intro {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .invariants-list {
+            font-weight: bold;
+            color: var(--primary-cyan);
+            font-size: 1.1em;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .invariants-list li {
+            margin-bottom: 15px;
+        }
+
+        .invariants-list span {
+            color: var(--text-main);
+            font-weight: normal;
+        }
+
         .citation {
             font-size: 0.85em;
             color: var(--primary-cyan);
@@ -130,6 +172,22 @@
         <p>The Reveritas Institute exists to preserve and advance trust-state integrity across regulated engineering ecosystems.</p>
         <p>The Institute does not exist to own, operate, or control the industries it serves. Its role is to establish neutral standards, issue verifiable trust-state certifications, and maintain the integrity of the Zero-Phase-Clock-Buffer (ZPCB) Framework.</p>
         <p>The Institute recognizes that trust cannot be commanded by authority alone. Trust must be earned through transparency, evidence, and independent verification.</p>
+
+        <hr class="separator">
+
+        <h2 class="invariants-title">The Reveritas Invariants</h2>
+        <p class="invariants-intro">The following principles are permanent.<br>No amendment, council vote, commercial agreement, or governance action may violate them.</p>
+        <ol class="invariants-list">
+            <li><span>Trust shall be established through evidence.</span></li>
+            <li><span>Verification shall not require surrendering sovereignty.</span></li>
+            <li><span>No participant may purchase control of reality.</span></li>
+            <li><span>Standards remain independent of commercial influence.</span></li>
+            <li><span>Every certification must be independently verifiable.</span></li>
+            <li><span>Framework governance shall remain separate from implementation.</span></li>
+            <li><span>The Institute exists to preserve trust-state neutrality.</span></li>
+        </ol>
+
+        <hr class="separator">
 
         <h2>I. What the Institute Governs</h2>
         <p>The Institute governs:</p>
