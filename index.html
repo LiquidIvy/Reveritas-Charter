@@ -3,262 +3,593 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveritas Institute Charter</title>
+    <title>Reveritas Institute Charter | ZPCB Framework</title>
     <style>
+        /* Exact colorway preserved from the Reveritas White Logo branding */
         :root {
-            --primary-cyan: #00b4db;
-            --primary-blue: #2a52be;
-            --primary-violet: #3a1c71;
-            --deep-bg: #0b0716;
-            --text-main: #f0f0f5;
-            --text-muted: #a0a0b5;
-            --container-bg: #151025;
-            --border-color: rgba(0, 180, 219, 0.3);
+            --bg-color-top: #0e1e35;
+            --bg-color-bottom: #1c1441;
+            --surface-color: #1a233b;
+            --surface-accent: #242f52;
+            --border-color: #313c54;
+            --text-primary: #e8e8e8;
+            --text-secondary: #adb6c4;
             
-            --logo-gradient: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-blue) 50%, var(--primary-violet) 100%);
+            /* Logo Gradient Highlights */
+            --accent-blue: #34c0f1;
+            --accent-purple: #8b5cf6;
+            
+            --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--deep-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(to bottom, var(--bg-color-top), var(--bg-color-bottom));
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            padding: 4rem 2rem;
             display: flex;
             justify-content: center;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px 20px;
-            padding: 50px;
-            background-color: var(--container-bg);
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            border-top: 5px solid;
-            border-image: var(--logo-gradient) 1;
+            max-width: 900px;
+            width: 100%;
         }
 
-        .header-section {
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2.5rem;
+            margin-bottom: 4rem;
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .subtitle {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-blue);
+            margin-bottom: 0.75rem;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin: 0 0 10px 0;
-            background: var(--logo-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-family: var(--font-serif);
+            font-size: 2.75rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: var(--text-primary);
         }
 
         h2 {
-            color: var(--primary-cyan);
-            margin-top: 40px;
-            font-size: 1.5em;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 1rem;
         }
 
         h3 {
-            color: var(--text-muted);
-            font-weight: normal;
-            margin: 0;
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
         }
 
         p {
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
         }
 
-        ul, ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-        
         strong {
-            color: var(--text-main);
-            font-size: 1.05em;
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
-        /* Styling for the Invariants Section */
-        hr.separator {
-            border: none;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary-cyan), var(--primary-violet), transparent);
-            margin: 50px 0;
-            opacity: 0.6;
-        }
-
-        .invariants-title {
-            text-align: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 1.6em;
-            margin-bottom: 10px;
-            border: none;
-        }
-
-        .invariants-intro {
-            text-align: center;
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .invariants-list {
-            font-weight: bold;
-            color: var(--primary-cyan);
-            font-size: 1.1em;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .invariants-list li {
-            margin-bottom: 15px;
-        }
-
-        .invariants-list span {
-            color: var(--text-main);
-            font-weight: normal;
-        }
-
-        .citation {
-            font-size: 0.85em;
-            color: var(--primary-cyan);
-            opacity: 0.7;
-            vertical-align: super;
-        }
-
-        .foundational-principle {
-            margin-top: 50px;
-            padding: 30px;
-            background: linear-gradient(135deg, rgba(0, 180, 219, 0.1), rgba(58, 28, 113, 0.1));
+        /* Callout Box for Motto */
+        .motto-card {
+            background: linear-gradient(135deg, var(--surface-color) 0%, rgba(26, 35, 59, 0.4) 100%);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            border-left: 4px solid var(--primary-cyan);
+            padding: 2.5rem;
+            margin: 3.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
         }
 
-        .foundational-principle h2 {
-            margin-top: 0;
-            border: none;
-            color: var(--text-main);
+        .motto-card p {
+            margin-bottom: 0;
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            text-align: center;
+            letter-spacing: 0.05em;
         }
-        
-        .motto {
-            font-size: 1.2em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: var(--primary-cyan);
-            margin-top: 20px;
+
+        .motto-card span {
+            color: var(--accent-blue);
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Invariants Grid Layout */
+        .invariants-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .invariants-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .invariant-card {
+            background-color: rgba(26, 35, 59, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .invariant-num {
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .invariant-text {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.6;
+            padding-top: 0.25rem;
+        }
+
+        /* Twin Layer Delineation Component */
+        .layer-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .layer-box.substrate {
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .layer-box.vehicle {
+            border-top: 4px solid var(--accent-purple);
+        }
+
+        .layer-box h4 {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .layer-box h4 .title-left { color: var(--text-primary); font-family: var(--font-sans); font-size: 1.15rem; text-transform: none; letter-spacing: normal; }
+        .layer-box h4 .title-right { color: var(--accent-blue); }
+        .layer-box.vehicle h4 .title-right { color: var(--accent-purple); }
+
+        .layer-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .layer-box li {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .layer-box li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        .layer-box.vehicle li::before {
+            color: var(--accent-purple);
+        }
+
+        /* Scope Columns Layout */
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .scope-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .scope-column h3 {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .scope-column.govern h3 { color: var(--accent-blue); }
+        .scope-column.exclude h3 { color: #ef4444; }
+
+        .scope-list {
+            list-style: none;
+        }
+
+        .scope-list li {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .scope-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        .scope-column.exclude .scope-list li::before {
+            content: "✕";
+            color: #ef4444;
+        }
+
+        /* Table Architecture Layout */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 3rem 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--surface-accent);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 1.25rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(26, 35, 59, 0.4);
+        }
+
+        td strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Definition Split Blocks */
+        .definitions-box {
+            background-color: rgba(14, 30, 53, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .def-item {
+            margin-bottom: 1.5rem;
+        }
+        .def-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .def-item strong {
+            font-family: var(--font-mono);
+            color: var(--accent-blue);
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        footer {
+            margin-top: 6rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        footer span {
+            color: var(--accent-blue);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="header-section">
+        <header>
+            <div class="subtitle">Zero-Persistence Cryptographic Boundary Framework</div>
             <h1>Reveritas Institute Charter</h1>
-            <h3>Version 0.1</h3>
-        </div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-purple); margin-top: 0.5rem; letter-spacing: 0.1em;">VERSION 0.1</div>
+        </header>
 
-        <h2>Preamble</h2>
-        <p>The Reveritas Institute exists to preserve and advance trust-state integrity across regulated engineering ecosystems.</p>
-        <p>The Institute does not exist to own, operate, or control the industries it serves. Its role is to establish neutral standards, issue verifiable trust-state certifications, and maintain the integrity of the Zero-Point-Cryptographic-Boundary (ZPCB) Framework.</p>
-        <p>The Institute recognizes that trust cannot be commanded by authority alone. Trust must be earned through transparency, evidence, and independent verification.</p>
+        <main>
+            <section>
+                <h2>Preamble</h2>
+                <p>The Reveritas Institute exists to preserve and advance trust-state integrity across regulated engineering ecosystems. The Institute does not exist to own, operate, or control the industries it serves. Its role is to establish neutral standards, issue verifiable trust-state certifications, and maintain the integrity of the Zero-Persistence Cryptographic Boundary (ZPCB) Framework.</p>
+                <p>The Institute recognizes that trust cannot be commanded by authority alone. Trust must be earned through transparency, evidence, and independent verification.</p>
+            </section>
 
-        <hr class="separator">
+            <div class="motto-card">
+                <p>Verify Everything. Retain Nothing.</p>
+                <span>Foundational Principle</span>
+            </div>
 
-        <h2 class="invariants-title">The Reveritas Invariants</h2>
-        <p class="invariants-intro">The following principles are permanent.<br>No amendment, council vote, commercial agreement, or governance action may violate them.</p>
-        <ol class="invariants-list">
-            <li><span>Trust shall be established through evidence.</span></li>
-            <li><span>Verification shall not require surrendering sovereignty.</span></li>
-            <li><span>No participant may purchase control of reality.</span></li>
-            <li><span>Standards remain independent of commercial influence.</span></li>
-            <li><span>Every certification must be independently verifiable.</span></li>
-            <li><span>Framework governance shall remain separate from implementation.</span></li>
-            <li><span>The Institute exists to preserve trust-state neutrality.</span></li>
-        </ol>
+            <section>
+                <h2>The Reveritas Invariants</h2>
+                <p>The following principles are permanent. No amendment, council vote, commercial agreement, or governance action may violate them.</p>
+                
+                <div class="invariants-grid">
+                    <div class="invariant-card">
+                        <div class="invariant-num">1</div>
+                        <div class="invariant-text">Trust shall be established through evidence.</div>
+                    </div>
+                    <div class="invariant-card">
+                        <div class="invariant-num">2</div>
+                        <div class="invariant-text">Verification shall not require surrendering sovereignty.</div>
+                    </div>
+                    <div class="invariant-card">
+                        <div class="invariant-num">3</div>
+                        <div class="invariant-text">No participant may purchase control of reality.</div>
+                    </div>
+                    <div class="invariant-card">
+                        <div class="invariant-num">4</div>
+                        <div class="invariant-text">Standards remain independent of commercial influence.</div>
+                    </div>
+                    <div class="invariant-card">
+                        <div class="invariant-num">5</div>
+                        <div class="invariant-text">Every certification must be independently verifiable.</div>
+                    </div>
+                    <div class="invariant-card">
+                        <div class="invariant-num">6</div>
+                        <div class="invariant-text">Framework governance shall remain separate from implementation.</div>
+                    </div>
+                    <div class="invariant-card" style="grid-column: span 2;">
+                        <div class="invariant-num">7</div>
+                        <div class="invariant-text">The Institute exists to preserve trust-state neutrality.</div>
+                    </div>
+                </div>
+            </section>
 
-        <hr class="separator">
+            <section>
+                <h2>Architectural Hierarchy &amp; Sovereignty</h2>
+                <p>The ZPCB Framework enforces a strict, dual-layer architectural split that permanently separates the Sovereign Substrate Constraint from the Application Layer. This hierarchy is constitutional; no governance action, commercial agreement, or implementation decision may invert or dissolve it.</p>
 
-        <h2>I. What the Institute Governs</h2>
-        <p>The Institute governs:</p>
-        <ul>
-            <li>The ZPCB Trust-State Framework.</li>
-            <li>Trust-State definitions and terminology.</li>
-            <li>Certificate of Internal Omission (CIO) specifications.</li>
-            <li>Evidence-as-a-Service (EaaS) certification standards.</li>
-            <li>Trust-State verification protocols.</li>
-            <li>Governance requirements for accredited implementations.</li>
-            <li>Public trust-state registries and certification procedures.</li>
-        </ul>
-        <p>The Institute serves as steward of these standards for the benefit of the broader ecosystem.</p>
+                <div class="layer-box substrate">
+                    <h4>
+                        <span class="title-left">Section X.1 — The Substrate Layer</span>
+                        <span class="title-right">ZPCB Constitutional Framework</span>
+                    </h4>
+                    <p>The Substrate operates as the unyielding, foundational law of the machine environment. It enforces the immutable invariants of the ZPCB Framework:</p>
+                    <ul>
+                        <li>RAM-only execution contexts — no data written to persistent storage during processing.</li>
+                        <li>Deterministic zero-state purges — all volatile workspaces are zeroized upon session termination.</li>
+                        <li>Absolute rejection of identity-bearing or persistent data artifacts at the execution boundary.</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic;">Governance Status: The Substrate is governed solely by the Joseph and Margaret Ivy Foundation under the Standard Layer (Layer 1). It is not subject to modification by the Institute Layer, Reveritas Commercial, or any licensee.</p>
+                </div>
 
-        <h2>II. What the Institute Does Not Control</h2>
-        <p>The Institute does not:</p>
-        <ul>
-            <li>Own participant data.</li>
-            <li>Direct manufacturing operations.</li>
-            <li>Control engineering decisions.</li>
-            <li>Determine commercial outcomes.</li>
-            <li>Grant a competitive advantage to any participant.</li>
-            <li>Exercise authority over member organizations.</li>
-            <li>Endorse products, governments, corporations, or political interests.</li>
-        </ul>
-        <p>The Institute certifies trust-state. It does not govern industry.</p>
+                <div class="layer-box vehicle">
+                    <h4>
+                        <span class="title-left">Section X.2 — The Vehicle Layer</span>
+                        <span class="title-right">Reveritas Application Platform</span>
+                    </h4>
+                    <p>The Vehicle Layer operates as the application and enforcement plane, routed explicitly for industrial manufacturing environments. It houses:</p>
+                    <ul>
+                        <li>The 100% STEP parser and geometric file processing pipeline.</li>
+                        <li>The Geometry Integrity Engine.</li>
+                        <li>The Adaptive Explanation Platform (AEP).</li>
+                        <li>The automated generation pipeline for Certificates of Internal Omission (CIO-O) and Certificates of Integrity Authorization (CIO-A).</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic; color: #ef4444;">Crucial Invariant: The Vehicle Layer is entirely powered and governed by the Substrate. The Reveritas Application Platform possesses zero structural authority to bypass, modify, or loosen the underlying ZPCB constraints.</p>
+                </div>
 
-        <h2>III. How Decisions Are Made</h2>
-        <p>The Institute operates under the principle of Evidence Before Authority.</p>
-        <p>All material decisions shall be evaluated against:</p>
-        <ol>
-            <li>Verifiability</li>
-            <li>Neutrality</li>
-            <li>Ecosystem Stability</li>
-            <li>Trust-State Integrity</li>
-        </ol>
-        <p>No individual organization, government, contractor, supplier, investor, or contributor may unilaterally direct the Institute’s standards.</p>
-        <p>Industry participation is advisory.</p>
-        <p>Stewardship responsibility remains independent.</p>
+                <h3>Section X.3 — Substrate/Vehicle Conflict Resolution</h3>
+                <p>When a conflict arises between a Vehicle Layer implementation and a Substrate constraint, the following resolution hierarchy applies:</p>
+                <p><strong>1. Substrate Authority:</strong> The Substrate constraint is authoritative. Vehicle-layer behavior yields unconditionally. The transaction aborts. No partial execution is permitted. Fail-closed behavior is mandatory.</p>
+                <p><strong>2. Immutable Logging:</strong> The conflict is logged. An immutable governance event is appended to the public governance chain, identifying the Vehicle component, the Substrate constraint invoked, and the transaction identifier.</p>
+                <p><strong>3. Adjudication Path:</strong> Disputes between the Institute Layer and Reveritas Commercial regarding Substrate interpretation are referred to the Foundation as the sole constitutional authority over Layer 1. The Foundation's determination is final and non-appealable within the governance structure.</p>
+            </section>
 
-        <h2>IV. How the Standard Evolves</h2>
-        <p>The ZPCB Framework is a living standard.</p>
-        <p>Amendments may be proposed by accredited participants, auditors, manufacturers, regulators, researchers, or members of the Industry Council.</p>
-        <p>All amendments must:</p>
-        <ul>
-            <li>Be publicly documented.</li>
-            <li>Include a rationale and expected impact.</li>
-            <li>Undergo independent review.</li>
-            <li>Preserve backward traceability.</li>
-            <li>Maintain the neutrality of the Institute.</li>
-        </ul>
-        <p>No amendment may transfer ownership of the framework or compromise the Institute’s independence.</p>
+            <section>
+                <h2>Governance Architecture</h2>
+                <p>The ecosystem functions via three independent layers to distribute control, protect intellectual property boundaries, and enforce compliance parameters completely free from relationship influence.</p>
 
-        <h2>V. Governance Architecture</h2>
-        <p><strong>Layer 1 — The Standard Layer</strong></p>
-        <p>The ZPCB Standard, Trust-State definitions, CIO specifications, and Boundary Cycle protocols live here. This layer is governed by supermajority amendment only, published openly, and versioned with the same hash-chain integrity as a CIO. No single member, no single contributor, no founder can unilaterally modify it. Changes require demonstrated consensus across all three ecosystem circles and a mandatory public comment period. Critically — the inevitable Joseph and Margaret Ivy Foundation is the home for this layer. It holds the IP and the constitutional documents.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">Layer</th>
+                                <th style="width: 30%;">Name</th>
+                                <th style="width: 30%;">Governed By</th>
+                                <th style="width: 30%;">Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>Standard Layer — ZPCB Substrate</td>
+                                <td>Joseph &amp; Margaret Ivy Foundation <span style="color: var(--accent-blue); display: block; font-size: 0.8rem; font-family: var(--font-mono);">(Supermajority amendment only)</span></td>
+                                <td>Holds ZPCB IP, Trust-State definitions, CIO specifications, Boundary Cycle protocols, and constitutional invariants. Change requires demonstrated consensus across all three ecosystem circles and a mandatory public comment period.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Institute Layer</td>
+                                <td>Independent Board <span style="color: var(--accent-purple); display: block; font-size: 0.8rem; font-family: var(--font-mono);">(Term-limited, conflict disclosed)</span></td>
+                                <td>Issues, revokes, and adjudicates CIOs. Maintains public governance chain. Board members are explicitly prohibited from commercial relationships with Reveritas Commercial or Council members. Funding is pooled and allocated by formula, not relationship.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>Commercial Layer — Reveritas Commercial</td>
+                                <td>Licensed by the Institute</td>
+                                <td>Provides EaaS (Evidence-as-a-Service), verification infrastructure, and enterprise services. Certified by the Institute; authorized by the Standard. The separation is load-bearing: the Institute certifies; Reveritas Commercial enables.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <p><strong>Layer 2 — The Institute Layer</strong></p>
-        <p>This is the operational body that issues, revokes, and adjudicates CIOs. Governed by an independent board whose members are explicitly prohibited from commercial relationships with Reveritas Commercial or any Industry Council member. Term-limited. Published conflict-of-interest disclosures. Decisions are logged to a public governance chain — the same architecture as the CIO's hash chain, but applied to institutional governance events. The key design constraint: the Institute cannot be funded by volume. Membership dues and certification fees must be pooled and allocated by formula, not by relationship — otherwise fee dependency recreates the capture problem.</p>
+            <section>
+                <h2>What the Institute Governs vs. Does Not Control</h2>
+                <p>To ensure structural boundaries remain clean and defensible, the administrative reach of the Institute is strictly bounded.</p>
 
-        <p><strong>Layer 3 — The Commercial Layer</strong></p>
-        <p>Reveritas Commercial operates as a separate entity, licensed by the Institute to provide EaaS, verification infrastructure, and enterprise services. The separation is load-bearing: the Institute certifies; Reveritas Commercial enables. When an organization gets a CIO, it's not Reveritas Commercial that makes it authoritative — it's the Institute. Reveritas Commercial is the railroad. The Standard is the law of the land.</p>
+                <div class="scope-grid">
+                    <div class="scope-column govern">
+                        <h3>I. What the Institute Governs</h3>
+                        <ul class="scope-list">
+                            <li>The ZPCB Trust-State Framework.</li>
+                            <li>Trust-State definitions and terminology.</li>
+                            <li>Certificate of Internal Omission (CIO-O) and Certificate of Integrity Authorization (CIO-A) specifications.</li>
+                            <li>Evidence-as-a-Service (EaaS) certification standards.</li>
+                            <li>Trust-State verification protocols.</li>
+                            <li>Governance requirements for accredited implementations.</li>
+                            <li>Public trust-state registries and certification procedures.</li>
+                        </ul>
+                    </div>
+                    <div class="scope-column exclude">
+                        <h3>II. What the Institute Does Not Control</h3>
+                        <ul class="scope-list">
+                            <li>Ownership of participant data.</li>
+                            <li>Directing manufacturing operations.</li>
+                            <li>Control of engineering decisions.</li>
+                            <li>Determining commercial outcomes.</li>
+                            <li>Granting competitive advantage to any participant.</li>
+                            <li>Exercising authority over member organizations.</li>
+                            <li>Endorsement of products, governments, or political interests.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="text-align: center; font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); font-style: italic;">"The Institute certifies trust-state. It does not govern industry."</p>
+            </section>
 
-        <div class="foundational-principle">
-            <h2>Foundational Principle</h2>
-            <p>Trust shall not be granted through status.</p>
-            <p>Trust shall be established through evidence.</p>
-            <p>The purpose of the Reveritas Institute is not to become the center of the ecosystem, but to ensure that every participant can verify reality without surrendering sovereignty.</p>
-            <p class="motto">Verify Everything. Retain Nothing.</p>
-        </div>
+            <section>
+                <h2>How Decisions Are Made &amp; How the Standard Evolves</h2>
+                <h3>III. How Decisions Are Made</h3>
+                <p>The Institute operates under the principle of <strong>Evidence Before Authority</strong>. All material decisions shall be evaluated against four pillars: Verifiability, Neutrality, Ecosystem Stability, and Trust-State Integrity. No individual organization, government, contractor, supplier, investor, or contributor may unilaterally direct the Institute's standards. Industry participation is advisory; stewardship responsibility remains independent.</p>
 
+                <h3>IV. How the Standard Evolves</h3>
+                <p>The ZPCB Framework is a living standard. Amendments may be proposed by accredited participants, auditors, manufacturers, regulators, researchers, or members of the Industry Council. All amendments must be publicly documented, include a clear rationale/expected impact, undergo independent review, and preserve backward traceability while maintaining the absolute neutrality of the Institute.</p>
+                <p style="color: #ef4444; font-size: 0.95rem; font-style: italic;">No amendment may transfer ownership of the framework, compromise the Institute's independence, or weaken the Substrate constraints established in Section X.1.</p>
+            </section>
+
+            <section>
+                <h2>Intellectual Property Boundaries &amp; Licensing Scopes</h2>
+                <p>The following provisions govern intellectual property ownership and the terms under which the ZPCB Framework may be licensed for commercial execution. These provisions are designed to protect framework neutrality while enabling the commercial relationships necessary for ecosystem adoption.</p>
+
+                <h3>Section Y.1 — Sovereign Framework Ownership</h3>
+                <p>The foundational ZPCB Framework, its mathematical state machines, cryptographic boundary protocols, and core zero-persistence methodologies remain the global, exclusive intellectual property of the <strong>Joseph and Margaret Ivy Foundation</strong>. This ownership is permanent and non-transferable. Prime Contractors and enterprise participants are granted non-exclusive execution licenses to operate within the ZPCB Framework. A license grants the right to execute — not the right to govern, modify, or sublicense the Substrate.</p>
+
+                <h3>Section Y.2 — Exclusive Production Routing</h3>
+                <p>To guarantee compliance with the ZPCB Framework across a live, multi-tier supply chain, all digital version control, geometric variance tracking, and multi-node autonomous handovers operating under a ZPCB execution license shall be routed exclusively through the Reveritas platform. A licensed participant may not engineer alternative, non-verified application layers over the licensed ZPCB Substrate for ZPCB-governed operations.</p>
+                <p><strong>Scope Boundary Constraint:</strong> The exclusive routing mandate applies to ZPCB-governed operations only. It does not restrict a participant's engineering activity outside the licensed ZPCB execution environment. This distinction is essential to enforceability — an unrestricted routing mandate would constitute a restraint-of-trade provision incompatible with standard Prime contractor commercial terms.</p>
+                <p style="font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">Commercial License Note: The exclusive routing requirement, fee structures, and split-fee commercial terms applicable to Prime Contractor engagements are governed by the Reveritas Commercial License Agreement, not this Charter. This Charter establishes the constitutional basis for those terms; the License Agreement specifies their operational application.</p>
+            </section>
+
+            <section class="definitions-box">
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-primary); margin-bottom: 1rem; font-weight: 600;">Verifiable Trust-State Certifications</div>
+                <div class="def-item">
+                    <strong>CIO-O (Certificate of Internal Omission)</strong>
+                    <p style="font-size: 0.93rem; margin-bottom: 0;">Proves that sensitive information was removed, transformed, or protected without retaining the original data.</p>
+                </div>
+                <div class="def-item">
+                    <strong>CIO-A (Certificate of Integrity Authorization)</strong>
+                    <p style="font-size: 0.93rem; margin-bottom: 0;">Proves that an approved revision was released to a verified recipient under a valid, timestamped control-plane authorization.</p>
+                </div>
+                <p style="font-size: 0.88rem; font-style: italic; color: var(--accent-purple); margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-bottom: 0;">Crucial Rule: These are distinct instruments. All charter references, governance records, and commercial agreements must use the qualified suffixes consistently to avoid cross-document reference ambiguity.</p>
+            </section>
+        </main>
+
+        <footer>
+            REVERITAS &middot; POWERED BY ZPCB &middot; <span>JOSEPH &amp; MARGARET IVY FOUNDATION STANDARD STEWARD</span>
+        </footer>
     </div>
 
 </body>
